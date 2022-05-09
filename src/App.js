@@ -1,19 +1,14 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-import Layout from './Layout';
 
-/*
-    Wrapper for layout of app, setting up future routing capabilities.
-*/
+import Header from './Layout/Header';
+import Main from './Layout/Main';
+
 
 export default function App() {
   return (
-    <div className="app-routes">
-      <Switch>
-        <Route path="/">
-          <Layout />
-        </Route>
-      </Switch>
-    </div>
+    <React.Fragment>
+      <Header />
+      <Main />
+    </React.Fragment>
   )
 }
