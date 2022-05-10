@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 export default function ToDo({ item, handleToggle }) {
-   
     // Active button holding toggler, updates state in parent.
     const notDoneButton = (
     <button
