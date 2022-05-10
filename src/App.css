@@ -1,0 +1,41 @@
+/* Purple for navbar and progress bar. */
+.dark-purple {
+    background-color: #5c2abf;
+}
+
+/* Fonts. */
+.dark-gray {
+    color: #515151;
+}
+
+.progress-text {
+    background-color: transparent;
+    font-size: 3rem;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+@media (min-width: 544px) {
+    .progress {font-size:2rem;}
+}
+
+/* Header styling. */
+.background-image {
+    background-image: url('../public/imgs/astronaut.png');
+    background-repeat: no-repeat;
+    background-size: 175%;
+    background-position: center center;
+    color: white;
+    height: 80vh;
+    overflow: hidden;
+}
+
+/* Responsive progress-bar height attribute. */
+.flex-height {
+    height: 2rem;
+}
+
+@media (min-width: 544px) {
+    .flex-height {height:1rem;}
+}
