@@ -1,6 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function Navbar() {
+    const [open, setOpen] = useState(false);
+
+    const handleMenu = () => {
+        setOpen(!open);
+    }
+    
+    const openMenu = (
+        <button
+            className="navbar-toggler navbar-toggler-icon custom-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offCanvasMenu"
+            aria-controls="offCanvasMenu"
+            aria-expanded="false" aria-label="toggle navigation"
+            onClick={handleMenu}
+        >
+        </button>
+    );
+
+    const closeMenu = (
+        <button
+            type="button"
+            className="btn-close text-reset custom-close"
+            data-bs-dismiss="offcanvas"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offCanvasMenu"
+            aria-controls="offCanvasMenu"
+            aria-label="Close"
+            onClick={handleMenu}
+        >
+        </button>
+    );
+    
+    
     return (
         <nav className="navbar p-2 dark-purple text-white navbar-dark navbar-expand-sm">
             <div className="container-fluid">
@@ -8,10 +42,8 @@ export default function Navbar() {
                     <img src={`${process.env.PUBLIC_URL}/imgs/rocket-icon.svg`} alt="rocket logo" className="me-3" />
                     <p className="me-3 mt-1 fs-1 fw-bold mb-0">Apollo</p>
                 </a>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarOptions" aria-controls="navbarOptions" aria-expanded="false" aria-label="toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarOptions">
+                    { open ? closeMenu : openMenu }
+                <div className="offcanvas offcanvas-start offcanvas-body" data-bs-backdrop="false" tabindex="-1" id="offCanvasMenu">
                     <ul className="navbar-nav ms-auto mb-2 align-self-sm-end">
                         <li className="nav-item">
                             <a href="/" className="link fw-bold d-flex flex-row justify-content-between">

@@ -43,6 +43,16 @@
 
 /* Navbar tray. */
 
+.custom-toggler.navbar-toggler { 
+    /* Changes icon for toggler hamburger. */
+    background-image: url("../public/imgs/hamburger-icon.svg");
+}
+
+.custom-close.btn-close { 
+    /* Changes icon for toggler cancel-x. */
+    background-image: url("../public/imgs/vector-x.svg");
+}
+
 .link {
     color: rgba(255,255,255,1);
     margin: 0 1rem 0 1rem;
@@ -58,26 +68,11 @@
 }
 
 @media (max-width: 544px) {
-    .navbar-collapse {
-        position: absolute;
+    .offcanvas {
+        width: 70%;
         top: 77px;
-        left: 0;
-        padding-left: 15px;
-        padding-right: 15px;
-        padding-bottom: 15px;
-        width: 75%;
-        height: 475%;
-        background-color: white;
-    }
-
-    .navbar-collapse.collapsing {
-        left: -75%;
-        transition: height 0s ease;
-    }
-
-    .navbar-collapse.show {
-        left: 0;
-        transition: left 300ms ease-in-out;
+        padding-left: 0;
+        display: inline;
     }
 
     .link {
@@ -94,4 +89,9 @@
     .navbar-toggler.collapsed ~ .navbar-collapse {
         transition: left 500ms ease-in-out;
     }
+}
+
+/* Background color for bottom gutter. */
+.bg-dark-grey {
+    background-color: #515151;
 }

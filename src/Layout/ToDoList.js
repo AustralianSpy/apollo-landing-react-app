@@ -6,6 +6,6 @@ export default function ToDoList({ todos, handleToggle }) {
     const todosList = todos.map((todo) => <ToDo key={todo.id} item={todo} handleToggle={handleToggle} />);
     
     return (
-        <section>{todosList}</section>
+        <section className="mb-4">{todosList}</section>
     )
 }
