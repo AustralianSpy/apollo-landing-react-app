@@ -27,7 +27,7 @@ export default function ToDo({ item, handleToggle }) {
     return (
         <div className="card px-4 py-2 my-3 shadow rounded flex-small-unit">
             <div className="card-body row justify-content-between align-text-middle">
-                <p className="card-text dark-gray fw-bold mb-0 p-0 col-6">{item.text}</p>
+                <p className="card-text text-wrap dark-gray fw-bold mb-0 p-0 col-5">{item.text}</p>
                 {item.done ? doneButton : notDoneButton }
             </div>
         </div>

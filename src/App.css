@@ -24,19 +24,17 @@
 .background-image {
     background-image: url('../public/imgs/astronaut.png');
     background-repeat: no-repeat;
-    background-size: 175%;
-    background-position: top center;
+    background-position: center center;
+    background-size: cover;
     color: white;
     height: 480px;
-    margin-bottom: -1.5rem !important;
+    margin-bottom: -1rem;
     overflow: hidden;
 }
 
 @media (min-width: 544px) {
     .background-image {
-        background-position-y: center;
-        background-size: 100%;
-        margin-bottom: 1rem !important;
+        margin-bottom: 0;
     }
 }
 
@@ -46,19 +44,21 @@
     background-color: #515151;
 }
 
-/* Responsive progress-bar height attribute. */
+/* Responsive progress-bar attributes. */
 .flex-bar {
     height: 2rem;
     width: 100%;
     align-self: center;
 }
 
-
 @media (min-width: 544px) {
     .flex-bar {
         height: 1rem;
         margin-left: 1rem;
         width: 25%;
+    }
+    .bar-container {
+        flex-direction: row !important;
     }
 }
 
@@ -129,6 +129,7 @@
 .card-text {
     font-size: 1.25em;
     line-height: 1.75em;
+    text-align: center;
 }
 
 @media (min-width: 544px) {
