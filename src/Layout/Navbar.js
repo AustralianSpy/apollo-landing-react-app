@@ -3,10 +3,13 @@ import React, { useState } from 'react';
 export default function Navbar() {
     const [open, setOpen] = useState(false);
 
+    // Sets state which decides which button to render for the navbar menu.
+    // If offcanvas is open, show hamburger, otherwise show x.
     const handleMenu = () => {
         setOpen(!open);
     }
     
+    // Hamburger list icon.
     const openMenu = (
         <button
             className="navbar-toggler navbar-toggler-icon custom-toggler"
@@ -19,7 +22,8 @@ export default function Navbar() {
         >
         </button>
     );
-
+    
+    // X Close icon.
     const closeMenu = (
         <button
             type="button"
@@ -34,7 +38,16 @@ export default function Navbar() {
         </button>
     );
     
-    
+    /*
+        OFFCANVAS STRUCTURE...
+            Schedule       >
+            ———————
+            About Us       >
+            ———————
+            Contact        >
+            ———————
+    */
+
     return (
         <nav className="navbar p-2 dark-purple text-white navbar-dark navbar-expand-sm">
             <div className="container-fluid">

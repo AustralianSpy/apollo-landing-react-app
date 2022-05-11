@@ -4,7 +4,7 @@ import Progress from './Progress';
 import ToDoList from './ToDoList';
 
 /*
-    TODO: Hold state of completed Todo items here so that it
+    Holds state of completed Todo items here so that it
     can be passed down to the sibling progress bar.
 */
 

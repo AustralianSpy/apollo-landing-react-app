@@ -7,5 +7,5 @@ export default function ToDoList({ todos, handleToggle }) {
     
     return (
         <section className="justify-content-between mb-4 flex-w">{todosList}</section>
-    )
+    );
 }

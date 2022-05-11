@@ -2,6 +2,8 @@ import React from 'react';
 import Navbar from './Navbar';
 
 export default function Header() {
+    // Text and button on header align middle on small screens and left on larger.
+    
     return (
         <header>
             <Navbar />
