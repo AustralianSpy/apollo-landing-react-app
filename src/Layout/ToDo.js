@@ -21,11 +21,13 @@ export default function ToDo({ item, handleToggle }) {
     </button>
    )
     
-    // Checks the 'done' state of the todo and renders button accordingly.
+    // Ternary the 'done' state of the todo and renders button accordingly.
+    // Small --> Large screens, todo must take up 1/3 of available space
+    // and wrap onto next row. Default state: 100% of width in single column.
     return (
-        <div className="card m-4 px-4 py-2 shadow rounded">
+        <div className="card px-4 py-2 my-3 shadow rounded flex-small-unit">
             <div className="card-body row justify-content-between align-text-middle">
-                <p className="card-text dark-gray fw-bold fs-3 mb-0 p-0 col-6">{item.text}</p>
+                <p className="card-text dark-gray fw-bold mb-0 p-0 col-6">{item.text}</p>
                 {item.done ? doneButton : notDoneButton }
             </div>
         </div>

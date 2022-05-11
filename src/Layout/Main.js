@@ -39,7 +39,7 @@ export default function Main() {
     };
     
     return (
-        <main className="bg-dark-gray">
+        <main className="px-4 px-sm-5">
             <Progress todos={todos} />
             <ToDoList todos={todos} handleToggle={handleToggle} />
         </main>

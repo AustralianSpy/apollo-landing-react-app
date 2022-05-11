@@ -10,14 +10,14 @@
 
 .progress-text {
     background-color: transparent;
-    font-size: 3rem;
-    width: 100%;
+    font-size: 3em;
+    width: auto;
     height: 100%;
     text-align: center;
 }
 
 @media (min-width: 544px) {
-    .progress {font-size:2rem;}
+    .progress-text {font-size:1em;}
 }
 
 /* Header styling. */
@@ -25,23 +25,47 @@
     background-image: url('../public/imgs/astronaut.png');
     background-repeat: no-repeat;
     background-size: 175%;
-    background-position: center center;
+    background-position: top center;
     color: white;
-    height: 45vh;
+    height: 480px;
+    margin-bottom: -1.5rem !important;
     overflow: hidden;
 }
 
+@media (min-width: 544px) {
+    .background-image {
+        background-position-y: center;
+        background-size: 100%;
+        margin-bottom: 1rem !important;
+    }
+}
+
+/* Footer class. */
+.footer {
+    min-height: 53px;
+    background-color: #515151;
+}
+
 /* Responsive progress-bar height attribute. */
-.flex-height {
+.flex-bar {
     height: 2rem;
+    width: 100%;
+    align-self: center;
 }
 
 
 @media (min-width: 544px) {
-    .flex-height {height:1rem;}
+    .flex-bar {
+        height: 1rem;
+        margin-left: 1rem;
+        width: 25%;
+    }
 }
 
-/* Navbar tray. */
+/* Navbar and tray. */
+.navbar {
+    height: 75px;
+}
 
 .custom-toggler.navbar-toggler { 
     /* Changes icon for toggler hamburger. */
@@ -67,7 +91,7 @@
     display: none;
 }
 
-@media (max-width: 544px) {
+@media (max-width: 544px) {  
     .offcanvas {
         width: 70%;
         top: 77px;
@@ -94,4 +118,36 @@
 /* Background color for bottom gutter. */
 .bg-dark-grey {
     background-color: #515151;
+}
+
+/* Responsive classes for main content on large screens. */
+.flex-w {
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.card-text {
+    font-size: 1.25em;
+    line-height: 1.75em;
+}
+
+@media (min-width: 544px) {
+    .flex-w {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .flex-small-unit {
+        box-sizing: border-box;
+        width: 45%;
+    }
+}
+
+@media (min-width: 1090px) {
+    .flex-small-unit {
+        width: 30%;
+    }
 }

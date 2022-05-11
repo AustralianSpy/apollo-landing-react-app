@@ -10,6 +10,7 @@ export default function App() {
     <React.Fragment>
       <Header />
       <Main />
+      <footer className="footer mt-5"></footer>
     </React.Fragment>
   )
 }

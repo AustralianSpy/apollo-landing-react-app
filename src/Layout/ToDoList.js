@@ -6,6 +6,6 @@ export default function ToDoList({ todos, handleToggle }) {
     const todosList = todos.map((todo) => <ToDo key={todo.id} item={todo} handleToggle={handleToggle} />);
     
     return (
-        <section className="mb-4">{todosList}</section>
+        <section className="justify-content-between mb-4 flex-w">{todosList}</section>
     )
 }

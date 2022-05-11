@@ -6,10 +6,12 @@ export default function Header() {
         <header>
             <Navbar />
             <section
-                className="background-image mt-0 d-flex flex-column align-items-center justify-content-center"
+                className="background-image mt-0 d-flex flex-column justify-content-center"
             >
-                <h1>Shoot for the Moon</h1>
-                <button className="text-white btn btn-info">Learn More</button>
+                <div className="d-flex flex-column mx-auto w-75 align-items-center align-items-sm-start">
+                    <h1>Shoot for the Moon</h1>
+                    <button className="text-white btn btn-info">Learn More</button>
+                </div>
             </section>
         </header>
     )
