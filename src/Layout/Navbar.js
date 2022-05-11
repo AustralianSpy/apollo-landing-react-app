@@ -56,7 +56,7 @@ export default function Navbar() {
                     <p className="me-3 mt-1 fs-1 fw-bold mb-0">Apollo</p>
                 </a>
                     { open ? closeMenu : openMenu }
-                <div className="offcanvas offcanvas-start offcanvas-body" data-bs-backdrop="false" tabindex="-1" id="offCanvasMenu">
+                <div className="offcanvas offcanvas-start offcanvas-body" data-bs-backdrop="false" id="offCanvasMenu">
                     <ul className="navbar-nav ms-auto mb-2 align-self-sm-end">
                         <li className="nav-item">
                             <a href="/" className="link fw-bold d-flex flex-row justify-content-between">
